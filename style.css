@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+}
+
+#app {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+#timer-container {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.answer {
+  display: block;
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 18px 20px;
+  margin: 12px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.answer:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.answer:active {
+  transform: scale(0.98);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  font-size: 15px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+canvas {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  #app {
+    margin: 40px 10px;
+    padding: 20px;
+  }
+
+  .answer {
+    font-size: 15px;
+    padding: 15px 12px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+}
+
+
+#timer {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  padding: 8px 12px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  z-index: 9999;
+}

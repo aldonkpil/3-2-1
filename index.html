@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Δοκιμασία εργασιακών συμπεριφορών</title>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <div id="timer">⏳ 30:00</div>
+  <div id='app'></div>
+  <script src='script.js'></script>
+
+
+<div id="explanation" style="display:none; margin-top: 2em; font-size: 14px; line-height: 1.6;">
+  <strong>Υπολογισμός Ποσοστών:</strong><br>
+  Η κάθε τριάδα θα δίνει αντίστοιχα 3-2-1 βαθμό (3 βαθμοί η απάντηση που επιλέχθηκε πρώτη, 2 η δεύτερη και 1 βαθμό αυτή που δεν επιλέχθηκε)<br><br>
+  Αν π.χ. εμφανιστούν 28 ερωτήσεις που σχετίζονται με τη δεξιότητα "Προσανατολισμός στο αποτέλεσμα" και ο χρήστης επιλέξει 21 φορές τη σχετική απάντηση ως πρώτη επιλογή, 4 φορές ως δεύτερη και 3 φορές ως τρίτη, αυτό σημαίνει πως θα συγκεντρώσει 74 πόντους με μέγιστους τους 84. Αυτό σημαίνει πως γι' αυτή τη δεξιότητα συγκεντρώνει ποσοστό 88,01%.<br><br>
+  Άλλο παράδειγμα υπολογισμού του ποσοστού είναι στη δεξιότητα "Προσαρμοστικότητα". Εμφανίζονται 24 ερωτήσεις που σχετίζονται με αυτή τη δεξιότητα και ο χρήστης επιλέξει 14 φορές τη σχετική απάντηση ως πρώτη επιλογή, 6 φορές ως δεύτερη και 2 φορές ως τρίτη, αυτό σημαίνει πως θα συγκεντρώσει 56 πόντους με μέγιστους τους 72. Αυτό σημαίνει πως γι' αυτή τη δεξιότητα συγκεντρώνει ποσοστό 77,78%.
+</div>
+
+<script>
+  // Προβολή επεξήγησης μόνο όταν η καρτέλα είναι στα αποτελέσματα
+  const observer = new MutationObserver(() => {
+    const resultsTab = document.getElementById("results");
+    const explanation = document.getElementById("explanation");
+    if (resultsTab && resultsTab.style.display !== "none") {
+      explanation.style.display = "block";
+    } else {
+      explanation.style.display = "none";
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+</script>
+
+</body>
+</html>
